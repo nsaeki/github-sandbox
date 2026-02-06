@@ -1,14 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
     ":timezone(Asia/Tokyo)",
     "helpers:pinGitHubActionDigests"
   ],
   "prHourlyLimit": 5,
-  "vulnerabilityAlerts": {
-    "enabled": false
-  },
+  "vulnerabilityAlerts": { "enabled": false },
   "rebaseWhen": "behind-base-branch",
   "packageRules": [
     {
