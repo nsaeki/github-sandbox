@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "github-sandbox"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "~3.12"
+requests = "^2.32.5"
+
+[tool.poetry.group.app.dependencies]
+boto3 = "^1.40.61"
+pydantic = "^2.12.5"
+mysqlclient = "^2.2.0"
+sqlalchemy = "^2.0.45"
+pydantic-settings = "^2.11.0"
+
+[tool.poetry.group.api.dependencies]
+fastapi = "^0.120.1"
+uvicorn = "^0.38.0"
+orjson = "^3.11.5"
+python-ulid = "^3.0.0"
+jsonschema = "^4.25.1"
+
+[tool.poetry.group.sub.dependencies]
+boto3-stubs = {extras = ["s3", "sqs"], version = "^1.40.61"}
+mypy-boto3-sqs = "^1.40.61"
+typer = "^0.20.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.18.2"
+isort = "^7.0.0"
+black = "^25.9.0"
+flake8 = "^7.3.0"
+bandit = "^1.8.6"
+types-requests = "^2.32.4.20250913"
+cfn-lint = "^1.43.1"
+types-PyMySQL = "^1.1.0.20250916"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.4.2"
+pytest-cov = "^7.0.0"
+pytest-asyncio = "^1.2.0"
+pytest-mock = "^3.15.1"
+httpx = "^0.28.1"
+moto = "^5.1.19"
+requests-mock = "^1.12.1"
+types-mysqlclient = "^2.2.0.20250915"
+types-jsonschema = "^4.25.1.20251009"
+
+
+[tool.poetry.group.sub-api.dependencies]
+pymysql = "^1.1.2"
+sqlalchemy = "^2.0.45"
+pydantic = "^2.12.5"
+pydantic-settings = "^2.11.0"
+boto3 = "^1.40.61"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
