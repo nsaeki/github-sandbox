@@ -1,4 +1,10 @@
 queue_rules:
-  - name: main
+  - name: default
+    queue_conditions:
+      - or:
+          - author=dependabot[bot]
+          - author=renovate[bot]
+      - base=main
+      - -label=do-not-merge
     autoqueue: true
     merge_method: squash
