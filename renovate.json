@@ -1,26 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
     ":timezone(Asia/Tokyo)",
     "helpers:pinGitHubActionDigests"
   ],
   "prHourlyLimit": 5,
-  "vulnerabilityAlerts": {
-    "enabled": false
-  },
+  "vulnerabilityAlerts": { "enabled": false },
   "rebaseWhen": "behind-base-branch",
   "packageRules": [
     {
-      "description": "自動マージ対象グループ：常に最新にリベースして自動マージまで完結",
-      "matchNames": [
-        "development and test dependencies",
-        "production patch updates",
-        "github actions updates"
-      ]
-    },
-    {
-      "description": "開発・テスト系パッケージをグループ化",
+      "description": "開発・テスト系パッケージをグループ化して",
       "matchManagers": ["poetry"],
       "matchDepTypes": ["dev", "test"],
       "groupName": "development and test dependencies"
