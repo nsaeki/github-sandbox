@@ -8,3 +8,4 @@ queue_rules:
       - -label=do-not-merge
     autoqueue: true
     merge_method: squash
+    batch_size: 5
