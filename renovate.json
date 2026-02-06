@@ -10,7 +10,7 @@
   "rebaseWhen": "behind-base-branch",
   "packageRules": [
     {
-      "description": "開発・テスト系パッケージをグループ化して",
+      "description": "開発・テスト系パッケージをグループ化",
       "matchManagers": ["poetry"],
       "matchDepTypes": ["dev", "test"],
       "groupName": "development and test dependencies"
