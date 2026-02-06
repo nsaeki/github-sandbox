@@ -1,5 +1,5 @@
 queue_rules:
-  - name: default
+  - name: main
     queue_conditions:
       - or:
           - author=dependabot[bot]
